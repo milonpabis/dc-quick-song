@@ -1,8 +1,8 @@
-from QuickMusic import os, QuickMusic, INTENTS
+from QuickMusic import QuickMusic, INTENTS
+import os
 
 
 if __name__ == "__main__":
     client = QuickMusic(intents=INTENTS)
-    env = os.environ["DISCORD_TOKEN"]
-    print(env)
-    #client.run(env)
+    env = os.getenv("DISCORD_TOKEN")
+    client.run(env)
